@@ -1,3 +1,4 @@
-pywin32
-streamlit
-pandas
+### ⚡ Running the System
+Forget opening multiple terminals. Start the entire security stack with one command:
+```bash
+python main.py

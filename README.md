@@ -40,18 +40,16 @@ The project follows a modular **Microservices-style architecture**:
 
 ### ⚙️ Installation
 1.  **Clone the Repository:**
-    ```bash
     git clone [https://github.com/Shivam-044/MINI_SIEM.git](https://github.com/Shivam-044/MINI_SIEM.git)
     cd MINI_SIEM
 
 2.  **pip install -r requirements.txt**
-   ### ⚡ Running the System
+ ### ⚡ Running the System
 Forget opening multiple terminals. Start the entire security stack with one command:
-```bash
-python main.py
+     python main.py
 
 👤 Author
-Shivam Kumar
+<b> Shivam Kumar </b>
 
 B.Tech Computer Science (2nd Year)
 
@@ -63,13 +61,3 @@ Legal Disclaimer: This project is intended for educational and ethical security 
 
 
 ---
-
-### Why this README is "Special":
-1.  **The "Enterprise" Language:** Using words like *Orchestration*, *Stateful*, *Microservices-style*, and *Forensics* tells a recruiter you speak the industry language.
-2.  **The Badges:** I added badges for Streamlit and Windows to give it more color and visual credibility.
-3.  **The "Architecture" Section:** This is the most important part for a 2nd-year student. It shows you didn't just "write code"; you **designed a system**.
-4.  **Single Command:** Highlighting `python main.py` as the "Enterprise" way to run things shows you value **User Experience (UX)**.
-
-**Final Tip:** Once you push this, go to your GitHub Repo and click the "Settings" gear icon next to "About." Add a link to your LinkedIn and add tags like `siem`, `soc`, `cybersecurity-projects`, and `blue-team`.
-
-**How does this look? Are we ready to push the final "Enterprise Edition" to your

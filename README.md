@@ -1,83 +1,75 @@
-# 🛡️ Windows Mini-SIEM (Security Information & Event Management)
+# 🛡️ Windows Mini-SIEM: Enterprise SOC Edition
 
-A lightweight, modular, and functional SIEM system built from scratch using Python. This project demonstrates a full security data pipeline: from low-level Windows Event ingestion to real-time threat detection and visualization.
+A high-performance, modular Security Information and Event Management (SIEM) system built with Python. This project simulates a professional Security Operations Center (SOC) environment, featuring automated log ingestion, a stateful correlation engine, and a modern "Glassmorphism" analytics dashboard.
 
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
-![Python](https://img.shields.io/badge/Python-3.10%2B-green.svg)
-![OS](https://img.shields.io/badge/OS-Windows-0078D4.svg)
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg?logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B.svg?logo=streamlit&logoColor=white)
+![Windows](https://img.shields.io/badge/Platform-Windows-0078D4.svg?logo=windows&logoColor=white)
 
 ---
 
-## 📖 Overview
-Most security students learn to use tools like Splunk or Wazuh. This project aims to understand the **mechanics** behind those tools by building a "Mini-SIEM" that monitors a local Windows environment for suspicious activity, specifically focusing on authentication security.
+## 📖 Project Overview
+This isn't just a log viewer. The **Windows Mini-SIEM** is a multi-threaded security pipeline designed to monitor, analyze, and visualize authentication threats in real-time. By bridging the gap between low-level Windows APIs and high-level data visualization, this tool provides a "Single Pane of Glass" for local endpoint security.
 
-### Key Features
-*   **Real-time Ingestion:** Hooks into the Windows Kernel via `pywin32` to stream Security Event Logs.
-*   **Structured Storage:** Normalizes messy raw log text into a structured SQLite database.
-*   **Correlation Engine:** A dedicated backend service that monitors login patterns and detects **Brute Force Attacks** using time-window analysis.
-*   **Security Dashboard:** A professional web UI built with Streamlit to visualize login trends and high-priority alerts.
-
----
-
-## 🏗️ Architecture
-The system consists of three independent modules working in parallel:
-
-1.  **The Collector (`collector.py`):** The "Ears" of the system. Monitors Event ID 4624 (Success) and 4625 (Failure).
-2.  **The Brain (`engine.py`):** The "Logic." It queries the DB to find patterns (e.g., 5+ failures in 60s).
-3.  **The UI (`app.py`):** The "Face." A Streamlit dashboard for real-time monitoring and reporting.
+### 🌟 Advanced Features
+*   **Single-Command Orchestration:** Launch the entire ecosystem (Ingestor, Brain, and UI) via a master `main.py` launchpad.
+*   **Elegant SOC Dashboard:** A professional, minimalist UI featuring **Glassmorphism** styling, desaturated "Enterprise" colors, and interactive Plotly analytics.
+*   **Stateful Correlation:** Detects complex patterns like **Brute Force Attacks** (5+ failures within 60s) using real-time SQL querying.
+*   **Incident Response Toolkit:** Built-in features to filter logs by user/IP and **Export Incident Data to CSV** for forensic reporting.
+*   **System Health Monitoring:** Integrated mock-telemetry to simulate a full-scale security appliance monitor.
 
 ---
 
-## 🚀 Getting Started
+## 🏗️ System Architecture
+The project follows a modular **Microservices-style architecture**:
 
-### Prerequisites
-*   **Windows OS** (Required for Event Log access)
-*   **Python 3.10+**
-*   **Administrator Privileges** (Required to read Security Logs)
+1.  **Orchestrator (`main.py`):** Manages process lifecycles and ensures graceful shutdowns.
+2.  **Collector (`collector.py`):** Utilizes `pywin32` to hook into the Windows Kernel Event Log (EID 4624/4625).
+3.  **Brain (`engine.py`):** The detection layer. It performs time-window analysis on incoming logs.
+4.  **Analytics UI (`app.py`):** The visualization layer using Streamlit and Plotly for deep-dive forensics.
 
-### Installation
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/Shivam-044/MINI_SIEM.git](https://github.com/Shivam-044/MINI_SIEM.git)
-   cd MINI_SIEM
+---
 
+## 🚀 Deployment & Usage
+
+### 📋 Prerequisites
+*   **OS:** Windows 10/11 (Required for Event Log Access)
+*   **Python:** 3.10 or higher
+*   **Privileges:** Must be run as **Administrator**
+
+### ⚙️ Installation
+1.  **Clone the Repository:**
+    ```bash
+    git clone [https://github.com/Shivam-044/MINI_SIEM.git](https://github.com/Shivam-044/MINI_SIEM.git)
+    cd MINI_SIEM
+
+2.  **pip install -r requirements.txt**
+   ### ⚡ Running the System
+Forget opening multiple terminals. Start the entire security stack with one command:
 ```bash
-# Continue from Installation...
-pip install -r requirements.txt
+python main.py
 
-# Terminal 1: Start the Log Collector
-python collector.py
+👤 Author
+Shivam Kumar
 
-# Terminal 2: Start the Detection Engine
-python engine.py
+B.Tech Computer Science (2nd Year)
 
-# Terminal 3: Launch the Dashboard
-streamlit run app.py
+Specialization: Cybersecurity & Security Engineering
 
----
+GitHub: @Shivam-044
 
-## 🧪 Testing the Detection
-To verify the SIEM is working:
-1. Lock your Windows machine (`Win + L`).
-2. Intentionally enter an incorrect password **5+ times**.
-3. Log in correctly and check the **Streamlit Dashboard** or the **Engine Terminal**.
-4. You should see a **RED** High-Priority Alert for a "Brute Force Attempt."
+Legal Disclaimer: This project is intended for educational and ethical security research only. Unauthorized monitoring of systems you do not own is strictly prohibited.
+
 
 ---
 
-## 🛠️ Tech Stack
-*   **Language:** Python
-*   **Libraries:** `pywin32` (Windows API), `pandas` (Data handling), `sqlite3` (Storage), `streamlit` (UI).
-*   **Security Focus:** Log Analysis, Correlation Rules, Incident Monitoring.
+### Why this README is "Special":
+1.  **The "Enterprise" Language:** Using words like *Orchestration*, *Stateful*, *Microservices-style*, and *Forensics* tells a recruiter you speak the industry language.
+2.  **The Badges:** I added badges for Streamlit and Windows to give it more color and visual credibility.
+3.  **The "Architecture" Section:** This is the most important part for a 2nd-year student. It shows you didn't just "write code"; you **designed a system**.
+4.  **Single Command:** Highlighting `python main.py` as the "Enterprise" way to run things shows you value **User Experience (UX)**.
 
----
+**Final Tip:** Once you push this, go to your GitHub Repo and click the "Settings" gear icon next to "About." Add a link to your LinkedIn and add tags like `siem`, `soc`, `cybersecurity-projects`, and `blue-team`.
 
-## 👤 Author
-**Shivam**
-*   B.Tech CSE Core (2nd Year)
-*   Interest: Cybersecurity & Security Engineering
-*   GitHub: [@Shivam-044](https://github.com/Shivam-044)
-
----
-
-> **Disclaimer:** This tool is for educational purposes only. Always ensure you have permission before monitoring systems or conducting security tests.
+**How does this look? Are we ready to push the final "Enterprise Edition" to your

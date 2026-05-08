@@ -41,23 +41,27 @@ The project follows a modular **Microservices-style architecture**:
 ### ⚙️ Installation
 1.  **Clone the Repository:**
     git clone [https://github.com/Shivam-044/MINI_SIEM.git](https://github.com/Shivam-044/MINI_SIEM.git)
+
     cd MINI_SIEM
 
-2.  **pip install -r requirements.txt**
+3.  **pip install -r requirements.txt**
  ### ⚡ Running the System
 Forget opening multiple terminals. Start the entire security stack with one command:
+     
      python main.py
 
 👤 Author
+
 <b> Shivam Kumar </b>
 
-B.Tech Computer Science (2nd Year)
+<i>B.Tech Computer Science (2nd Year) </i>
 
-Specialization: Cybersecurity & Security Engineering
+<i>Specialization: Cybersecurity & Security Engineering </i>
 
 GitHub: @Shivam-044
 
-Legal Disclaimer: This project is intended for educational and ethical security research only. Unauthorized monitoring of systems you do not own is strictly prohibited.
+<b>Legal Disclaimer:</b>
+<i>This project is intended for educational and ethical security research only. Unauthorized monitoring of systems you do not own is strictly prohibited.</i>
 
 
 ---

@@ -1,4 +1,7 @@
-### ⚡ Running the System
-Forget opening multiple terminals. Start the entire security stack with one command:
-
-python main.py
+REQUIREMENTS:---
+1. pywin32
+2. streamlit
+3. pandas 
+4. fastapi
+5. uvicorn
+6. requests

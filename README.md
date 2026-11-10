@@ -64,5 +64,4 @@ GitHub: @Shivam-044
 <i>This project is intended for educational and ethical security research only. Unauthorized monitoring of systems you do not own is strictly prohibited.</i>
 
 ---
-Feel free give a ⭐ .
----
+<i>If you find this project useful, feel free to give it a ⭐️!</i>

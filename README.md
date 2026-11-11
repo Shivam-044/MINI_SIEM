@@ -42,9 +42,9 @@ The project follows a modular **Microservices-style architecture**:
 1.  **Clone the Repository:**
     git clone [https://github.com/Shivam-044/MINI_SIEM.git](https://github.com/Shivam-044/MINI_SIEM.git)
 
-    cd MINI_SIEM
+        cd MINI_SIEM
 
-3.  **pip install -r requirements.txt**
+3.     pip install -r requirements.txt
  ### ⚡ Running the System
 Forget opening multiple terminals. Start the entire security stack with one command:
      
